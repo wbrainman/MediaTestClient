@@ -25,7 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MediaTest";
+    private static final String TAG = "MediaTestClient";
     private IMediaTestService iMediaTestService;
     private static final String MEDIA_TEST_SERVICE_PACKEG_NAME =
             "com.example.mediatestservice";
@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
         Log.d(TAG, "init: ");
+        chronometer = (Chronometer) findViewById(R.id.chronometer);
         btn_start = (Button) findViewById(R.id.start);
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
